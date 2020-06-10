@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>ProductApp</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/index_style.css" />
+  </head>
+  <body>
+    <section class="home">
+      <div class="container my-5">
+        <div class="form-group">
+          <label class="text-primary">Product Name</label>
+          <input id="proNameInp" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label class="text-primary">Product Price</label>
+          <input id="proPriceInp" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label class="text-primary">Product Category</label>
+          <input id="proCategoryInp" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label class="text-primary">Product Description</label>
+          <textarea id="proDescInp" class="form-control"></textarea>
+        </div>
+
+        <button onclick="addProduct()" class="btn btn-primary">
+          Add Product
+        </button>
+        <div class="row mt-3">
+          <div class="col-md-2">
+            <button onclick="updateProduct()" class="btn btn-info">
+              Update Product
+            </button>
+          </div>
+          <div id="dataupdate" class="col-md-6">
+            <input
+              class="form-control mb-2"
+              id="nameofpro"
+              placeholder="Enter the product name that you want to update its data"
+            />
+            <input
+              class="form-control mb-2"
+              id="desofpro"
+              placeholder="Enter the new description if you want"
+            />
+            <input
+              class="form-control"
+              id="priofpro"
+              placeholder="Enter the new price if you want"
+            />
+          </div>
+          <div id="buttonupdate" class="col-md-1">
+            <button onclick="theproductupdated()" class="btn btn-info">
+              OK
+            </button>
+          </div>
+          <div id="hide" class="col-md-2">
+            <button onclick="hidde()" class="btn btn-info">
+              NotNow
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <input
+      class="w-50 m-auto form-control"
+      onkeyup="searchProduct(this.value)"
+      placeholder="Search Product"
+    />
+
+    <!-------------------------------------------------------------------------------------------------->
+    <div class="container py-5">
+      <div class="row" id="myRow"></div>
+    </div>
+
+    <!----------------------------------->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="js/js_main.js"></script>
+  </body>
+</html>
